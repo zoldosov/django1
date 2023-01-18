@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+</head>
+<body>
+
+
+<div class="Header">
+    {% block Header %}
+    <h1></h1>
+    <a href="{% url 'account:logout' %}"><button>Logout</button></a>
+    {% endblock Header %}
+</div>
+<div class="Menu">
+    {% block Menu %}
+    <h1>Menu</h1>
+    <div class="navbar">
+        <a href="{% url 'main:news' %}">News</a>
+        <a href="{% url 'main:student' %}">Student</a>
+        <a href="#">Adout</a>
+    </div>
+    {% endblock Menu %}
+</div>
+
+<div class="Content">
+    {% block Content %}
+    <h1>Content</h1>
+    {% endblock Content %}
+</div>
+
+<div class="Footer">
+    {% block Footer %}
+    <h1>Footer</h1>
+    {% endblock Footer %}
+</div>
+
+
+</body>
+</html>

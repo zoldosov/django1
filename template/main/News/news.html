@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+
+{% block Content %}
+    {% for new in news %}
+        <h3>{{new.info}}</h3>
+<br>
+<a href="{% url 'main:update' new.id %}">
+    <button>Update</button>
+</a>
+<a href="{% url 'main:delete' new.id %}">
+    <button>Delete</button>
+</a>
+{% endfor %}
+ {% endblock %}
+

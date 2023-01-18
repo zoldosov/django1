@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+{% block Content %}
+    {% for student in students %}
+        <h3>{{student}}</h3>
+<br>
+<a href="{% url 'main:student_update' student.id %}">
+    <button>Update</button>
+</a>
+<a href="{% url 'main:student_delete' student.id %}">
+    <button>Delete</button>
+</a>
+{% endfor %}
+ {% endblock %}

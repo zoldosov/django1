@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block Menu %}
+    {% for info in infos %}
+        <div class="navbar">
+        <div class="dropdown">
+            <a href="{% url 'main:news'%}"><button class="dropbtn">News
+                <i class="fa fa-caret-down"></i>
+            </button></a>
+                      <a href="{% url 'main:student'%}"><button class="dropbtn">Student
+                <i class="fa fa-caret-down"></i>
+            </button></a>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}
+
